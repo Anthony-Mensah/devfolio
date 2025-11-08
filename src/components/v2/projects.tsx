@@ -1,6 +1,4 @@
-import React from 'react';
 import ProjectCard from '../project-card';
-import MotionDiv from '../motion-div';
 
 // React.FC<{ project: Project }>
 const projects = [

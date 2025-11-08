@@ -80,7 +80,7 @@ const Experience = () => {
                         {/* Company & Duration */}
                         <div className="mb-4 flex flex-col justify-between sm:flex-row sm:items-center">
                           <h3 className="text-foreground text-xl font-bold">{exp.name}</h3>
-                          <span className="text-primary bg-primary/10 rounded-full px-3 py-1 text-sm font-medium">
+                          <span className="text-primary bg-primary/10 w-fit rounded-full px-3 py-1 text-sm font-medium">
                             {exp.duration}
                           </span>
                         </div>

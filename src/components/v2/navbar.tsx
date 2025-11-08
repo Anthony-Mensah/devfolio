@@ -1,5 +1,5 @@
-import { Menu, X } from 'lucide-react';
-import React, { useState } from 'react';
+import { X } from 'lucide-react';
+import { useState } from 'react';
 import MobileNav from './mobile-nav';
 import { CiMenuFries } from 'react-icons/ci';
 import { IoLogoGithub } from 'react-icons/io';

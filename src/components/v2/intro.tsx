@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from 'react-icons/fi';
+import { FiMail, FiArrowDown } from 'react-icons/fi';
 import { IoLogoGithub } from 'react-icons/io';
 import { FaLinkedin } from 'react-icons/fa';
 import { containerVariants, itemTransition, itemVariants } from '../../utils';
