@@ -1,6 +1,9 @@
 import { Project } from '../../types';
 import { BiCart } from 'react-icons/bi';
 import MotionDiv from './motion-div';
+import { GrSecure } from 'react-icons/gr';
+import { GoBeaker } from 'react-icons/go';
+import { CiVideoOn } from 'react-icons/ci';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const getStatusConfig = (isNDA: boolean, title: string) => {
@@ -26,20 +29,20 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         ? {
             label: 'Under NDA',
             color: 'accent',
-            icon: <BiCart size={20} />,
+            icon: <GoBeaker size={20} />,
             gradient: 'from-accent/10 to-border/50',
           }
         : {
             label: 'Under NDA',
             color: 'primary',
-            icon: <BiCart size={20} />,
+            icon: <GrSecure size={20} />,
             gradient: 'from-primary/10 to-border/50',
           };
     }
     return {
       label: project.type || 'Project',
       color: 'primary',
-      icon: <BiCart size={20} />,
+      icon: <CiVideoOn size={20} />,
       gradient: 'from-primary/20 to-accent/20',
     };
   };
@@ -62,7 +65,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.title.includes('Nexus') ? (
             <div className="relative h-full w-full">
               <img
-                src="../../public/nexus.PNG"
+                src="nexus.PNG"
                 alt={`${project.title} screenshot`}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
               />

@@ -31,7 +31,7 @@ const Me = () => {
         <main className="container mx-auto flex flex-col items-center space-y-3 md:flex-row md:justify-center md:space-x-10">
           <div className="justify-end md:flex md:h-[500px] md:flex-1">
             <img
-              src="../../../public/saint.jpg"
+              src="saint.jpg"
               alt="Anthony Mensah - Frontend Developer"
               className="aspect-square rounded-3xl object-cover"
             />
