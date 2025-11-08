@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Core Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+
+  /* Brand Colors */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+
+  /* UI Elements */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  /* Interactive States */
+  --color-ring: var(--ring);
+  --color-hover: var(--hover);
+}
+
+:root {
+  /* Core Colors */
+  --background: #faf7f5; /* A slightly warmer, softer off-white */
+  --foreground: #191c22; /* Kept your excellent dark blue-gray */
+  --muted: #6d7177; /* Kept your muted slate */
+
+  /* Brand Colors */
+  --primary: #fb715b; /* Kept your trusted teal/green */
+  --primary-foreground: #faf7f5;
+  --accent: #d97706; /* A slightly deeper, more sophisticated amber */
+
+  /* UI Elements */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0; /* A light gray for borders */
+  --input: #ffffff; /* White input backgrounds feel cleaner */
+
+  /* Interactive States */
+  --ring: #168781; /* Primary color for focus rings */
+  --hover: #f1f5f9; /* A very light gray for hover states */
+}
+
+.dark {
+  /* Core Colors */
+  --background: #191c22; /* A richer, deeper dark blue than pure black */
+  --foreground: #faf7f5; /* Kept your clean off-white */
+  --muted: #9fa2a8; /* Kept your light slate */
+
+  /* Brand Colors */
+  --primary: #fb715b; /* A brighter, more luminous teal for better pop on dark */
+  --primary-foreground: #faf7f5; /* Text on primary buttons should be the dark background color */
+  --accent: #f59e0b; /* The original amber, perfect for dark mode */
+
+  /* UI Elements */
+  --card: #1e293b; /* A dark slate for cards, providing depth */
+  --card-foreground: #f1f5f9;
+  --border: #334155; /* A medium slate for borders */
+  --input: #1e293b; /* Match the card color for inputs */
+
+  /* Interactive States */
+  --ring: #2dd4bf; /* Match the new primary color */
+  --hover: #1e293b; /* A slightly lighter dark for hover states */
+  /* font */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  p,
+  span {
+    @apply text-base leading-relaxed md:text-lg lg:text-xl;
+  }
+  h1 {
+    @apply text-4xl leading-tight font-bold md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl leading-snug font-semibold md:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-2xl leading-snug font-semibold md:text-3xl lg:text-4xl;
+  }
+  h4 {
+    @apply text-xl leading-normal font-medium md:text-2xl lg:text-3xl;
+  }
+  h5 {
+    @apply text-lg leading-normal font-medium md:text-xl lg:text-2xl;
+  }
+  h6 {
+    @apply text-base leading-relaxed font-medium md:text-lg lg:text-xl;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply w-[90%];
+  }
+  .icon {
+    @apply hover:text-primary h-8 w-8 cursor-pointer text-black duration-150;
+  }
+  .general-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  .nav-link {
+    @apply hover:text-primary cursor-pointer text-base leading-relaxed duration-150 md:text-lg lg:text-xl;
+  }
+  .custom-duration {
+    @apply duration-300;
+  }
+  .custom-btn {
+    @apply border-foreground hover:bg-foreground hover:text-background min-w-[8rem] cursor-pointer rounded-3xl border-[1.7px] py-1 text-center text-sm duration-300 lg:min-w-[10rem] lg:py-2 lg:text-lg;
+  }
+  .horizontal-space {
+    @apply space-x-5;
+  }
+  .vertical-space {
+    @apply space-y-5;
+  }
+  .stack-icon {
+    @apply h-10 w-10;
+  }
+}
+
+/* normal css */
+.font-header {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+p,
+span,
+a {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.debug {
+  border: 2px red solid;
+}
+/* Hide scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+  width: 100%;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cadet);
+  /* border-left: 2px solid var(--white); */
+  border-radius: 2px;
+}
