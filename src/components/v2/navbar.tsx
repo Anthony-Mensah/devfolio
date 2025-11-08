@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import MobileNav from './mobile-nav';
 import { CiMenuFries } from 'react-icons/ci';
 import { IoLogoGithub } from 'react-icons/io';
-import { FaLinkedin } from 'react-icons/fa';
 
 const navLinks = [
   {
@@ -49,21 +48,19 @@ const Navbar = () => {
             ))}
           </ul>
           {/* links */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden items-center space-x-3 lg:flex">
             {/* github */}
-            <a href="https://github.com/Anthony-Mensah" target="_blank">
+            <a href="https://www.linkedin.com/in/anthony-mensah-3b4925227/" target="_blank">
               <div className="flex items-center space-x-1">
                 <IoLogoGithub />
                 <span className="nav-link">github</span>
               </div>
             </a>
             {/* github */}
-            <a href="https://www.linkedin.com/in/anthony-mensah-3b4925227/" target="_blank">
-              <div className="flex items-center space-x-1">
-                <FaLinkedin />
-                <span className="nav-link">Linkedin</span>
-              </div>
-            </a>
+            <div className="flex items-center space-x-1">
+              <IoLogoGithub />
+              <span>github</span>
+            </div>
           </div>
           {/* hamburger menu */}
           <div className="relative md:hidden" onClick={() => setIsOpen((prev) => !prev)}>
@@ -74,7 +71,7 @@ const Navbar = () => {
               // <Menu className="text-primary cursor-pointer" />
             )}
             {isOpen && (
-              <div className="absolute top-7 right-0">
+              <div className="absolute top-13 -right-4">
                 <MobileNav />
               </div>
             )}
