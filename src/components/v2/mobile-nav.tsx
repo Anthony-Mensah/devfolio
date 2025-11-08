@@ -39,7 +39,7 @@ const MobileNav = () => {
               <motion.li
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.3 }}
+                transition={{ delay: index * 0.1 }}
               >
                 {link.label}
               </motion.li>
@@ -50,7 +50,7 @@ const MobileNav = () => {
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
             className="flex space-x-4 px-4 py-3"
           >
             {/* github */}
