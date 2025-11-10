@@ -3,6 +3,7 @@ import { useState } from 'react';
 import MobileNav from './mobile-nav';
 import { CiMenuFries } from 'react-icons/ci';
 import { IoLogoGithub } from 'react-icons/io';
+import { FaLinkedin } from 'react-icons/fa';
 
 const navLinks = [
   {
@@ -50,17 +51,19 @@ const Navbar = () => {
           {/* links */}
           <div className="hidden items-center space-x-3 lg:flex">
             {/* github */}
-            <a href="https://www.linkedin.com/in/anthony-mensah-3b4925227/" target="_blank">
+            <a href="https://github.com/Anthony-Mensah" target="_blank">
               <div className="flex items-center space-x-1">
                 <IoLogoGithub />
                 <span className="nav-link">github</span>
               </div>
             </a>
-            {/* github */}
-            <div className="flex items-center space-x-1">
-              <IoLogoGithub />
-              <span>github</span>
-            </div>
+            {/* linkedin */}
+            <a href="https://www.linkedin.com/in/anthony-mensah-3b4925227/" target="_blank">
+              <div className="flex items-center space-x-1">
+                <FaLinkedin />
+                <span className="nav-link">linkedin</span>
+              </div>
+            </a>
           </div>
           {/* hamburger menu */}
           <div className="relative md:hidden" onClick={() => setIsOpen((prev) => !prev)}>
